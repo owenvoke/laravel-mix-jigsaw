@@ -83,6 +83,7 @@ class Jigsaw {
 
         return new class {
             apply(compiler) {
+                console.log(compiler)
                 compiler.hooks.jigsawDone = new SyncHook([]);
 
                 compiler.hooks.done.tap('Jigsaw Webpack Plugin', () => {
